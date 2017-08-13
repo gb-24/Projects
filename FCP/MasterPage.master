@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        #fcp_header
+        {
+            font-size : 35px;
+            color : orangered;
+            font-family : 'Comic Sans MS';
+        }
+
+        #fcp_footer
+        {
+            color : #0026ff;
+        }
+
+        #master_div a
+        {
+            text-decoration : none;
+            background : #ff6a00;
+            padding : 5px;
+            border-radius : 7px;
+            color : white;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body align="center">
+    <div id="fcp_header" align="center">Food Chain Portal</div>
+
+    <div style="background-color:red;" id="master_div"> 
+        <table width="100%">
+            <tr align="center">
+                <td><a href="home.aspx">Home</a></td>
+                <td><a href="services.aspx">Services</a></td>
+                <td><a href="contactus.aspx">Contact Us</a></td>
+                <td><a href="abtus.aspx">About Us</a></td>
+                <td><a href="testimonials.aspx">Testimonials</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
